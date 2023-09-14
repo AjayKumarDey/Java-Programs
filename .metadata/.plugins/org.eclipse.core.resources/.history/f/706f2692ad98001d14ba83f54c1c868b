@@ -1,0 +1,7 @@
+
+public class File_writer {
+public static void main(String[] args) {
+	FileWriter fw=new FileWriter("");
+	   
+}
+}

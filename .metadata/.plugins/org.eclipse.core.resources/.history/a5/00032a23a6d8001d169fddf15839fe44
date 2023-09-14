@@ -1,0 +1,19 @@
+package MYCODE;
+
+public class R {
+public static void main(String[] args) {
+	String str="ajay";
+	/*
+	 * String str="madam"; String s=str; String rev=""; for(int
+	 * i=str.length()-1;i>=0;i--) { rev=rev+str.charAt(i);
+	 * 
+	 * } if(s.equals(rev)) { System.out.println("palindrome"); } else {
+	 * System.out.println("not palindrome"); }
+	 */
+	StringBuilder s=new StringBuilder(str);
+	System.out.println(s.reverse());
+	
+	
+	
+}
+}

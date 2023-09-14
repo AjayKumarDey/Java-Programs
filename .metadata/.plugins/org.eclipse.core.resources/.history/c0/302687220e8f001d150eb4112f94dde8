@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class EvenOddOFArray {
+public static void main(String[] args) {
+	int a[]= {4,5,14,9,12,8};
+	ArrayList<Integer>al1=new ArrayList<>();
+	ArrayList<Integer>al2=new ArrayList<>();
+	
+	for (int i = 1; i <=a.length; i++)
+	{
+		if(i%2==0)
+		{
+			al1.add(a[i]);
+		}
+		else
+		{
+			al2.add(a[i]);
+		}
+
+	}
+	System.out.println("no are even ");
+	for (int no1:al1)
+	{
+		System.out.print(no1+" ");
+	}
+	System.out.println();
+	System.out.println("no are odd");
+
+	for (int no2: al2) {
+		System.out.print(no2+" ");
+	}
+}
+}

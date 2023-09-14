@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Test5 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the enter");
+	int n=sc.nextInt();
+	for (int i = 1; i < args.length; i++)
+	{
+		if(i%2==0)
+		{
+			System.out.println(i+" even number");
+		}
+		else
+			System.out.println("odd number");
+	}
+	
+}
+}

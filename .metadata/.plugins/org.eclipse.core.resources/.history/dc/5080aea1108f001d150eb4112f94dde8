@@ -1,0 +1,67 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main2 {
+	 static class cell {
+	        int x, y;
+	        int dis;
+	 
+	        public cell(int x, int y, int dis)
+	        {
+	            this.x = x;
+	            this.y = y;
+	            this.dis = dis;
+	        }
+	    }
+	    static boolean isInside(int x, String y, int N)	    {
+	             if (x >= 1 && x <= N && y >= 1 && y <= N)
+	            return true;
+	        return false;
+	    }
+	    static int minStepToReachTarget(int knightPos[],
+	                            int targetPos[], int N)
+	    {
+	        int dx[] = { 1,2,3,4,5,6,7,8,9 };
+	        String dy[] = { "a1","b2","c3","d4","e5","f6","f7","f8" };
+	 
+	        
+	        Queue<cell> q = new LinkedList<>();
+	 
+	      
+	        q.add(new cell(knightPos[0], knightPos[1], 0));
+	 
+	        cell t;
+	        int x;
+			String y;
+	        boolean visit[][] = new boolean
+	            [N + 1][N + 1]; 
+	        visit[knightPos[0]][knightPos[1]] = true;
+	        while (!q.isEmpty()) {
+	            t = q.poll();
+	            if (t.x == targetPos[0] && t.y == targetPos[1])
+	                return t.dis;
+	           
+	            for (int i = 0; i < 8; i++) {
+	                x = t.x + dx[i];
+	                y = t.y + dy[i];
+	                if (isInside(x, y, N) && !visit[x][y]) {
+	                    visit[x][y] = true;
+	                    q.add(new cell(x, y, t.dis + 1));
+	                }
+	            }
+	        }
+	        return Integer.MAX_VALUE;
+	    }
+	
+	    public static void main(String[] args)
+	    {
+	        int N = 30;
+	        int knightPos[] = { 1, 1 };
+	        int targetPos[] = { 30, 30 };
+	 
+	        // Function call
+	        System.out.println(
+	            minStepToReachTarget(knightPos, targetPos, N));
+	    }
+	}
+

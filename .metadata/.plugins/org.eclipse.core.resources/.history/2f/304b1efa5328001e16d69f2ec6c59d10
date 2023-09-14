@@ -1,0 +1,10 @@
+
+public class Replace_the_word {
+public static void main(String[] args) {
+	
+	      String originalString = "i am a tester";
+	      String replacedString = originalString.replace("tester", "developer");
+	       System.out.println(replacedString);
+	    }
+	}
+

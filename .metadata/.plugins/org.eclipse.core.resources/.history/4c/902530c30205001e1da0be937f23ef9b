@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Capital_Space {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the name");
+	int space=0,cl=0,sl=0;
+	String str=sc.nextLine();
+   for (int i = 0; i < str.length(); i++)
+   {
+	char ch=str.charAt(i);
+	if(ch==' ' )
+	{
+		space++;
+	}
+	if(ch>='A'&& ch<='Z')
+	{
+		cl++;
+	}
+	
+	if(ch>='a'&& ch<='z')
+	 	if(ch>=65 && ch<=95)
+	{
+		sl++;
+	}
+   }
+   System.out.println("no of space "+space);
+   System.out.println("no of capital latter "+cl);
+   System.out.println("small latter is "+sl);
+}
+}

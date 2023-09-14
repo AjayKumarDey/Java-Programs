@@ -1,0 +1,29 @@
+package MYCODE;
+
+import java.util.Scanner;
+
+public class PalindromeNumber {
+public static void main(String[] args) {
+	System.out.println("Enter the number");
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	int rev=0;
+	int p=n;
+	while(n>0)
+	{
+		int rem=n%10;
+		rev=rev*10+rem;
+		n=n/10;
+	}
+	if(p==rev)
+	{
+		System.out.println("palindrome number");
+	}
+	else
+	{
+		System.out.println("not paindrome number");
+	}
+	
+	
+}
+}

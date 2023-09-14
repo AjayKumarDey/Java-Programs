@@ -1,0 +1,7 @@
+
+public class CommonArray {
+public static void main(String[] args) {
+	int a[]= {23,12,4,87,4};
+	int b[]= {87,32,9,5,4,};
+}
+}

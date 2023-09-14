@@ -1,0 +1,10 @@
+
+public class Replace_the_word {
+public static void main(String[] args) {
+	String str="I am a tester";
+	String word1="developer";
+	String word2="tester";
+	
+	
+}
+}

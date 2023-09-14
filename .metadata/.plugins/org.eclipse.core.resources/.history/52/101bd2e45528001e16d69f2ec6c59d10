@@ -1,0 +1,29 @@
+public  class reverseword {
+    public static void main(String[] args) {
+        String input = "Hello world how are you"; 
+        String reversed = reverseFirstLastWord(input);
+        System.out.println(reversed);
+    }
+
+    public static String reverseFirstLastWord(String input) {
+        String[] words = input.trim().split("\\s+");
+        int len = words.length;
+        
+        if (len <= 1) {
+            return input;
+        }
+
+       
+        String temp = words[0];
+        words[0] = words[len - 1];
+        words[len - 1] = temp;
+
+        
+        StringBuilder sb = new StringBuilder();
+        for (String word : words) {
+            sb.append(word).append(" ");
+        }
+
+        return sb.toString().trim();
+    }
+}

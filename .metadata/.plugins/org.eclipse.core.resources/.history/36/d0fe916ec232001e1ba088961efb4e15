@@ -1,0 +1,33 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class Lenear {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter the array size");
+	int n=sc.nextInt();
+	int ar[]=new int[n];
+	System.out.println("enter the elements ");
+	for(int i=0;i<n;i++)
+	{
+		ar[i]=sc.nextInt();
+	}
+	System.out.println("enter the search element");
+	int ser=sc.nextInt();
+	int count=0;
+	for(int i=0;i<n;i++)
+	{
+		if(ar[i]==ser)
+			count++;
+	}
+	if(count>0)
+	{
+		System.out.println("number is found");
+	}
+	else
+	{
+		System.out.println("number is not found");
+	}
+}
+}

@@ -1,0 +1,41 @@
+
+/*
+ * public class Count_Sn { public static void main(String[] args) { String
+ * str="james__07@gmai.com"; int len=str.length(); int count=0; for(int
+ * i=0;i<len;i++) { char ch=str.charAt(i);
+ * 
+ * if(ch=='')
+ * 
+ * count++; } System.out.print(count); } }
+ */
+public class CountNumbersAndSymbols {
+    public static void main(String[] args) {
+        String input = "Hello! 123 How are you?"; // Replace this with your desired input string
+
+        int numCount = countNumbers(input);
+        int symbolCount = countSymbols(input);
+
+        System.out.println("Number Count: " + numCount);
+        System.out.println("Symbol Count: " + symbolCount);
+    }
+
+    public static int countNumbers(String input) {
+        int count = 0;
+        for (char ch : input.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static int countSymbols(String input) {
+        int count = 0;
+        for (char ch : input.toCharArray()) {
+            if (!Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}

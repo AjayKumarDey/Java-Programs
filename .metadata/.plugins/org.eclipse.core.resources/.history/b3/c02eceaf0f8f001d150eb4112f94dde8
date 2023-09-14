@@ -1,0 +1,21 @@
+import java.util.HashSet;
+
+public class CommonArray {
+public static void main(String[] args) {
+	int a[]= {23,12,4,87,4};
+	int b[]= {87,32,9,5,4,};
+	HashSet<Integer> hs=new HashSet<>();
+	for (int i = 0; i < a.length; i++)
+	{
+		for (int j = 0; j < b.length; j++)
+		{
+			if(a[i]==a[j]);
+			hs.add(a[i]);
+			
+		}
+	}
+	for (int no : hs) {
+		System.out.println(no+" ");
+	}
+}
+}
